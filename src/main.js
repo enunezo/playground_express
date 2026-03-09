@@ -1,9 +1,7 @@
 import "./style.css"
 
-fetch("http://localhost:3000/")
+fetch("/api/server")
   .then(res => res.json())
   .then(data => {
-    console.log(data)
+    document.body.innerHTML += `<p>${data.message}</p>`
   })
-
-console.log("Vite running")
